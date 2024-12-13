@@ -1,0 +1,103 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 3px;
+    padding: 5px;
+    margin: auto;
+}
+
+.element {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.element:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.element .atomic-number {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.element .symbol {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.element .name {
+    font-size: 0.6em;
+    color: #555;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+
+.categories div {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: white;
+}
+
+.alkali { background-color: #ff6666; }
+.alkaline { background-color: #ffcc66; }
+.transition { background-color: #66b3ff; }
+.post-transition { background-color: #99cc99; }
+.metalloids { background-color: #ff99cc; }
+.non-metals { background-color: #66ff99; }
+.noble-gases { background-color: #ccccff; }
+.lanthanides { background-color: #ffb3ff; }
+.actinides { background-color: #ff99b3; }
+.unknown { background-color: #cccccc; }
+
+#toggleButton {
+background-color: #4CAF50;
+color: white;
+margin: 10px;
+padding: 10px 20px;
+font-size: 16px;
+border: none;
+border-radius: 5px;
+cursor: pointer; 
+line-height: 16px;
+}
+
+#toggleButton:hover {
+background-color: #45a049;
+}
+#heading{
+    text-align: center; 
+    margin-top: -20px; background: linear-gradient(to right, 
+    #ff6666,   /* alkali */
+    #ffcc66,   /* alkaline */
+    #66b3ff,   /* transition */
+    #99cc99,   /* post-transition */
+    #ff99cc,   /* metalloids */
+    #66ff99,   /* non-metals */
+    #ccccff,   /* noble-gases */
+    #ffb3ff,   /* lanthanides */
+    #ff99b3,   /* actinides */
+    #cccccc    /* unknown */
+);
+-webkit-background-clip: text;
+    color: transparent;  
+    font-weight: bold;  
+}
